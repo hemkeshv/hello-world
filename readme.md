@@ -1,2 +1,5 @@
-#Run the code:
+## Run the code:
+```
+cd helloworld
 python manage.py runserver
+```
