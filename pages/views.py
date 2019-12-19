@@ -11,16 +11,16 @@ def index(request):
 
     firstname=''
     lastname=''
-    emailvalue=''
+    teamname=''
 
     form= UserForm(request.POST or None)
     if form.is_valid():
         firstname= form.cleaned_data.get("first_name")
         lastname= form.cleaned_data.get("last_name")
-        emailvalue= form.cleaned_data.get("email")
+        teamname= form.cleaned_data.get("team_name")
 
 
     context= {'form': form, 'firstname': firstname, 'lastname':lastname,
-              'submitbutton': submitbutton, 'emailvalue':emailvalue}
+              'submitbutton': submitbutton, 'teamname':teamname}
         
     return render(request, 'pages/index.html', context)   

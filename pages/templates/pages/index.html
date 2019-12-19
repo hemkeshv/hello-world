@@ -1,18 +1,18 @@
 <head>
 <meta charset="UTF-8">
-<title>User Information Form</title>
+<title>Best Athletes</title>
 </head>
 <body>
+<h1> Best Athletes </h1>
 <form action="" method="POST">
 {% csrf_token %}
 {{ form.as_p }}
-<input type="Submit" name="submit" value="Submit"/>
+<input type="Submit" name="submit" value="Add Player"/>
 </form>
 
-{% if submitbutton == "Submit" %} 
-<h1> Your first name is {{ firstname }}</h1>
-<h1> Your last name is {{ lastname }}</h1>
-<h1> Your email is {{ emailvalue }} </h1>
+
+{% if submitbutton == "Add Player" %} 
+<table border="1"> <tr> <th>First Name</th> <th>Last Name</th> <th>Team Name</th></tr> <tr> <td>{{ firstname }}</td> <td>{{ lastname }}</td> <td>{{ teamname }}</td> </tr> </table>
 {% endif %}
 
 </body>
